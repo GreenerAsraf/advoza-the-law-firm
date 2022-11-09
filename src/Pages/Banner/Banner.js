@@ -1,11 +1,16 @@
 import React from 'react';
 import BannerItem from './BannerItem';
-import img1 from '../../banner/1.jpg'
-import img2 from '../../banner/2.jpg'
-import img3 from '../../banner/3.jpg'
-import img4 from '../../banner/4.jpg'
-import img5 from '../../banner/5.jpg'
-import img6 from '../../banner/6.jpg'
+import img1 from '../../images/banner/banner1.jpg';
+import img2 from '../../images/banner/banner2.webp';
+import img3 from '../../images/banner/banner3.jpg'
+import img4 from '../../images/banner/download.jpg'
+import img5 from '../../images/banner/banner7.jpg';
+import img6 from '../../images/banner/banner6.jpg'
+
+
+// https://ibb.co/S7QyWvC
+// https://ibb.co/0BZTLcR
+// https://ibb.co/xH78P5x
 
 const bannerData = [
     {
@@ -47,7 +52,7 @@ const bannerData = [
 ]
 const Banner = () => {
     return (
-        <div className="carousel w-full py-10">
+        <div className="carousel flex-row  w-full py-10">
         {
             bannerData.map(slide => <BannerItem
                 key={slide.id}
