@@ -14,6 +14,8 @@ const Header = () => {
 }
   const menuItems = <>
   <li className='font-semibold'><Link to='/'>Home</Link></li>
+  <li className='font-semibold'><Link to='/services'>Services</Link></li>
+  <li className='font-semibold'><Link to='/blog'>Blog</Link></li>
   {
       user?.email ?
           <>
@@ -48,7 +50,7 @@ const Header = () => {
           </ul>
       </div>
       <div className="navbar-end">
-          <button className="btn btn-outline btn-warning">Appointment</button>
+          <button className="btn btn-outline btn-warning">Make An Appointment</button>
       </div>
   </div>
 
