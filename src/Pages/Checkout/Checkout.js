@@ -25,11 +25,11 @@ const Checkout = () => {
             message
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://assignment-eleven-server-six.vercel.app/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
-                authorization: `Bearer ${localStorage.getItem('genius-token')}`
+                authorization: `Bearer ${localStorage.getItem('advoza')}`
             },
             body: JSON.stringify(order)
         })
