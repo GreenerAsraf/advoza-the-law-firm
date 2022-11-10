@@ -7,9 +7,10 @@ const Blog = () => {
         <div className='place-content-center'>
                 <h2 className='text-center text-orange'>Welcome to My Blog</h2>
 
-                <div className="card w-full m-12 bg-primary text-primary-content">
+         <div className="card w-full m-12 bg-primary text-primary-content">
   <div className="card-body ">
-    <h2 className="card-title text-center">Question: Difference between SQL and NoSQ</h2>
+    <h2 className="card-title text-center">Question:Difference between SQL and NoSQ</h2>
+    
     <p>Answer: SQL is the programming language used to interface with relational databases. (Relational databases model data as records in rows and tables with logical links between them).
     NoSQL is a class of DBMs that are non-relational and generally do not use SQL
     SQL databases are relational, NoSQL databases are non-relational.
