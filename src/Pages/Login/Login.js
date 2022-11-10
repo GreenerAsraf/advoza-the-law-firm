@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 import img from '../../images/2341.png_300.png';
 
 const Login = () => {
@@ -25,6 +26,7 @@ const Login = () => {
 
     });
 }
+useTitle('Login')
 
     return (
         <div className="hero w-full my-20">

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../Hooks/useTitle';
 import ServiceCard from './ServiceCard/ServiceCard';
 
 const Services = () => {
@@ -9,6 +10,7 @@ const Services = () => {
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);
+    useTitle('Services')
     return (
         <div>
             <h2 className='text-center text-orange'>Our Current Services </h2>

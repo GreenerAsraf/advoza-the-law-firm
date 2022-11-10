@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
+import useTitle from '../../Hooks/useTitle';
 
 const Checkout = () => {
 
@@ -44,6 +45,7 @@ const Checkout = () => {
             .catch(er => console.error(er));
 
     }
+    useTitle('Checkout')
     return (
         <div>
             <form onSubmit={handlePlaceOrder}>
