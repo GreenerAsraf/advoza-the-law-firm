@@ -54,14 +54,14 @@ const router = createBrowserRouter([
         {
           path: '/allServices',
           element: <AllServices></AllServices>,
-          loader:()=> fetch('http://localhost:5000/Services')
+          loader:()=> fetch('https://assignment-eleven-server-six.vercel.app/services')
         },
 
         { path: '/reviews',
         element: <Reviews></Reviews> 
         },
         { path: '/addService',
-        element:  <AddService></AddService>  
+        element:  <PrivateRoute><AddService></AddService> </PrivateRoute> 
         },
         {
           path: '*',

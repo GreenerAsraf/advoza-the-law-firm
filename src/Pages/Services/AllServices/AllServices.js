@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import DetailService from '../DetailService';
-import ServiceCard from '../ServiceCard/ServiceCard';
+
 
 const AllServices = () => {
     const services =useLoaderData();
