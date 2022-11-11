@@ -2,10 +2,36 @@ import React, { useContext } from 'react';
 import {Link} from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthProvider/AuthProvider';
 import useTitle from '../../Hooks/useTitle';
+import googleLogo from '../../images/Google__G__Logo.svg';
 import img from '../../images/2341.png_300.png';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 const Login = () => {
-    const {login} = useContext(AuthContext)
+    const {login ,providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+
+const handleGoogleSignIn = ()=> {
+    console.log('clicked');
+    providerLogin(googleProvider)
+    .then((result) => {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        const credential = GoogleAuthProvider.credentialFromResult(result);
+        const token = credential.accessToken;
+        // The signed-in user info.
+        const user = result.user;
+        // ...
+      }).catch((error) => {
+        // Handle Errors here.
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
+        // ...
+      });
+}
+
 
     const handleLogin = event =>{
         event.preventDefault();
@@ -56,7 +82,10 @@ useTitle('Login')
                         <input className="btn btn-primary" type="submit" value="Login" />
                     </div>
                 </form>
-                <p className='text-center'>New to Genius Car <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
+              
+                <span className="">Sign in using <button onClick={ handleGoogleSignIn} className='text-orange-600 font-bold'>Google </button> </span> 
+                <br />
+                <p className='text-center'>New to Advoza <Link className='text-orange-600 font-bold' to="/signup">Sign Up</Link> </p>
             </div>
         </div>
     </div>
