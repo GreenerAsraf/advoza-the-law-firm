@@ -3,7 +3,7 @@ import { PhotoProvider,PhotoView } from 'react-photo-view';
 import { Link } from 'react-router-dom';
 
 const DetailService = ({service}) => {
-    const { _id, img, price, title } = service;
+    const { _id, img, price, title,description } = service;
 
     return (
         <div>
@@ -17,9 +17,10 @@ const DetailService = ({service}) => {
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p className='text-2xl text-orange-600 font-semibold'>Service Fee: ${price}</p>
-                <div className="card-actions justify-end">
+                <p className='text-2xl'>{description}</p>
+                <div className="card-actions justify-center">
                     <Link to={`/checkout/${_id}`}>
-                        <button className="btn btn-primary">Checkout</button>
+                        <button className="btn btn-primary">View Details</button>
                     </Link>
                 </div>
             </div>

@@ -6,8 +6,6 @@ import ServiceCard from '../ServiceCard/ServiceCard';
 const AllServices = () => {
     const services =useLoaderData();
     
-    const { _id, img, price, title } = services;
-    console.log(services);
     return (
        
         <div> 

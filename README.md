@@ -1,12 +1,10 @@
-website name is advoza
-it is a law firm.
+==> The website name is advoza
+==> it is a law firm.
 
-there are several package used......
-dependency list are 
+==> there are several package used......
+        dependency list are 
 
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
+  
     "daisyui": "^2.38.1",
     "firebase": "^9.13.0",
     "react": "^18.2.0",
@@ -15,6 +13,7 @@ dependency list are
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
+    react photo view
   
 
 
@@ -22,14 +21,16 @@ dependency list are
 
 
 
-client github code :
+==> client github code :
 https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-GreenerAsraf
 
-client live link: 
+==> client live link: 
 https://advoza-a0c0b.web.app
 
-server github link:
+==> server github link:
 https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-GreenerAsraf
 
-server site live link: 
+==>server site live link: 
 https://assignment-eleven-server-six.vercel.app/
+
+==> client site was deployed in firebase and server site deployed in vercel.
